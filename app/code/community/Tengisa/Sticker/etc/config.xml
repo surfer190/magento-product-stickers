@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Tengisa_Sticker extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ *
+ * @category       Tengisa
+ * @package        Tengisa_Sticker
+ * @copyright      Copyright (c) 2016
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <modules>
+        <Tengisa_Sticker>
+            <version>1.0.0</version>
+        </Tengisa_Sticker>
+    </modules>
+    <global>
+        <resources>
+            <tengisa_sticker_setup>
+                <setup>
+                    <module>Tengisa_Sticker</module>
+                    <class>Tengisa_Sticker_Model_Resource_Setup</class>
+                </setup>
+            </tengisa_sticker_setup>
+        </resources>
+        <blocks>
+            <tengisa_sticker>
+                <class>Tengisa_Sticker_Block</class>
+            </tengisa_sticker>
+        </blocks>
+        <helpers>
+            <tengisa_sticker>
+                <class>Tengisa_Sticker_Helper</class>
+            </tengisa_sticker>
+        </helpers>
+        <models>
+            <tengisa_sticker>
+                <class>Tengisa_Sticker_Model</class>
+                <resourceModel>tengisa_sticker_resource</resourceModel>
+            </tengisa_sticker>
+            <tengisa_sticker_resource>
+                <class>Tengisa_Sticker_Model_Resource</class>
+                <entities>
+                    <sticker>
+                        <table>tengisa_sticker_sticker</table>
+                    </sticker>
+                    <sticker_store>
+                        <table>tengisa_sticker_sticker_store</table>
+                    </sticker_store>
+                </entities>
+            </tengisa_sticker_resource>
+        </models>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <tengisa_sticker>
+                    <file>tengisa_sticker.xml</file>
+                </tengisa_sticker>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Tengisa_Sticker>
+                    <files>
+                        <default>Tengisa_Sticker.csv</default>
+                    </files>
+                </Tengisa_Sticker>
+            </modules>
+        </translate>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Tengisa_Sticker before="Mage_Adminhtml">Tengisa_Sticker_Adminhtml</Tengisa_Sticker>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <frontend>
+        <routers>
+            <tengisa_sticker>
+                <use>standard</use>
+                <args>
+                    <module>Tengisa_Sticker</module>
+                    <frontName>tengisa_sticker</frontName>
+                </args>
+            </tengisa_sticker>
+        </routers>
+        <layout>
+            <updates>
+                <tengisa_sticker>
+                    <file>tengisa_sticker.xml</file>
+                </tengisa_sticker>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Tengisa_Sticker>
+                    <files>
+                        <default>Tengisa_Sticker.csv</default>
+                    </files>
+                </Tengisa_Sticker>
+            </modules>
+        </translate>
+        <category>
+          <collection>
+            <stickers/>
+          </collection>
+        </category>
+        <events>
+          <catalog_category_flat_loadnodes_before>
+            <class>tengisa_sticker/observer</class>
+            <method>addStickerAttribute</method>
+          </catalog_category_flat_loadnodes_before>
+        </events>
+    </frontend>
+    <default>
+        <tengisa_sticker>
+            <sticker>
+                <breadcrumbs>1</breadcrumbs>
+            </sticker>
+        </tengisa_sticker>
+    </default>
+</config>

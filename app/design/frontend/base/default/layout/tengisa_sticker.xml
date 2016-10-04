@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Tengisa_Sticker extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ *
+ * @category       Tengisa
+ * @package        Tengisa_Sticker
+ * @copyright      Copyright (c) 2016
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<layout>
+  <catalog_product_view>
+        <reference name="head">
+          <action method="addCss">
+              <stylesheet>css/tengisa_sticker.css</stylesheet>
+          </action>
+        </reference>
+        <reference name="product.info.media">
+            <action method="setTemplate"><template>tengisa/sticker/catalog/product/view/media.phtml</template></action>
+            <block name="badge" template="tengisa/sticker/badge.phtml" type="tengisa_sticker/badge"/>
+        </reference>
+        <reference name="product.info.extrahint">
+            <block type="tengisa_sticker/badge" name="panels" template="tengisa/sticker/panel.phtml" />
+        </reference>
+    </catalog_product_view>
+    <catalog_category_default>
+      <reference name="head">
+        <action method="addCss">
+            <stylesheet>css/tengisa_sticker.css</stylesheet>
+        </action>
+      </reference>
+        <reference name="product_list">
+            <action method="setTemplate">
+              <template>tengisa/sticker/catalog/product/list.phtml</template>
+            </action>
+            <block name="badge" template="tengisa/sticker/badge.phtml" type="tengisa_sticker/badge"/>
+            <block name="panel" template="tengisa/sticker/panel.phtml" type="tengisa_sticker/badge"/>
+        </reference>
+    </catalog_category_default>
+    <catalog_category_layered>
+        <reference name="head">
+          <action method="addCss">
+              <stylesheet>css/tengisa_sticker.css</stylesheet>
+          </action>
+        </reference>
+        <reference name="product_list">
+            <action method="setTemplate">
+              <template>tengisa/sticker/catalog/product/list.phtml</template>
+            </action>
+            <block name="badge" template="tengisa/sticker/badge.phtml" type="tengisa_sticker/badge" />
+            <block name="panel" template="tengisa/sticker/panel.phtml" type="tengisa_sticker/badge"/>
+        </reference>
+    </catalog_category_layered>
+    <catalogsearch_result_index>
+        <reference name="head">
+          <action method="addCss">
+              <stylesheet>css/tengisa_sticker.css</stylesheet>
+          </action>
+        </reference>
+        <reference name="search_result_list">
+            <action method="setTemplate">
+              <template>tengisa/sticker/catalog/product/list.phtml</template>
+            </action>
+            <block name="badge" template="tengisa/sticker/badge.phtml" type="tengisa_sticker/badge"/>
+            <block name="panel" template="tengisa/sticker/panel.phtml" type="tengisa_sticker/badge"/>
+        </reference>
+    </catalogsearch_result_index>
+    <catalogsearch_advanced_result>
+        <reference name="head">
+          <action method="addCss">
+              <stylesheet>css/tengisa_sticker.css</stylesheet>
+          </action>
+        </reference>
+        <reference name="search_result_list">
+            <action method="setTemplate">
+              <template>tengisa/sticker/catalog/product/list.phtml</template>
+            </action>
+            <block name="badge" template="tengisa/sticker/badge.phtml" type="tengisa_sticker/badge"/>
+            <block name="panel" template="tengisa/sticker/panel.phtml" type="tengisa_sticker/badge"/>
+        </reference>
+    </catalogsearch_advanced_result>
+</layout>

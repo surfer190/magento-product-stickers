@@ -1,0 +1,19 @@
+<?php
+  $product = $this->getProduct();
+  if (!$product)
+  {
+      if ($product = Mage::registry('product'))
+      {
+          $stickers = $product->getStickers();
+      }
+  }
+?>
+<div class="panels">
+  <?php if (is_array($stickers)): ?>
+  <?php foreach($stickers as $sticker): ?>
+      <?php echo $this->getPanelContent($sticker) ?>
+  <?php endforeach; ?>
+  <?php else: ?>
+    <?php echo $this->getPanelContent($stickers) ?>
+  <?php endif; ?>
+</div>

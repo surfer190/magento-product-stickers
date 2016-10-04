@@ -1,0 +1,8 @@
+<?php $stickers = $this->getStickers(); ?>
+<?php if (is_array($stickers)): ?>
+<?php foreach($stickers as $sticker): ?>
+    <p><?php echo $this->getBadgeContent($sticker) ?></p>
+<?php endforeach; ?>
+<?php else: ?>
+  <?php echo $this->getBadgeContent($stickers) ?>
+<?php endif; ?>
