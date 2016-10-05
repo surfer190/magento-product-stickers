@@ -1,0 +1,52 @@
+.product-image .tengisa-sticker-badge.top-left {
+    top: 0px;
+    left: 0px;
+}
+
+.product-image .tengisa-sticker-badge.top-right {
+    top: 0px;
+    right: 0px;
+}
+
+.product-image .tengisa-sticker-badge.bottom-left {
+    bottom: 0px;
+    left: 0px;
+}
+
+.product-image .tengisa-sticker-badge.bottom-right {
+    bottom: 0px;
+    right: 0px;
+}
+
+div.tengisa-sticker-badge.top-left {
+    top: 0px;
+    left: 0px;
+}
+
+div.tengisa-sticker-badge.top-right {
+    top: 0px;
+    right: 0px;
+}
+
+div.tengisa-sticker-badge.bottom-left {
+    bottom: 0px;
+    left: 0px;
+}
+
+div.tengisa-sticker-badge.bottom-right {
+    bottom: 0px;
+    right: 0px;
+}
+
+body .tengisa-sticker-badge {
+    margin: 0px;
+    position: absolute;
+    display: block;
+    z-index: 1;
+}
+
+
+
+.catalog-category-view .category-products .products-grid li .thumbnail{
+  position: relative;
+}
