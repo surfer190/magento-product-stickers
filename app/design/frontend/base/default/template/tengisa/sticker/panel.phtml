@@ -7,13 +7,10 @@
           $stickers = $product->getStickers();
       }
   }
+  $stickers = explode(',', $product->getStickers());
 ?>
-<div class="panels">
-  <?php if (is_array($stickers)): ?>
+<div class="stickers-panels">
   <?php foreach($stickers as $sticker): ?>
-      <?php echo $this->getPanelContent($sticker) ?>
+      <p><?php echo $this->getPanelContent($sticker) ?></p>
   <?php endforeach; ?>
-  <?php else: ?>
-    <?php echo $this->getPanelContent($stickers) ?>
-  <?php endif; ?>
 </div>

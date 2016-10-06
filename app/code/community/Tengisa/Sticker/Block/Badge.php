@@ -8,6 +8,12 @@ class Tengisa_Sticker_Block_Badge extends Mage_Core_Block_Template
                             '3' => 'bottom-left',
                             '4' => 'bottom-right');
 
+    protected function _construct()
+    {
+        //cache the stickers for half a day
+        $this->setCacheLifetime(43200);
+    }
+
     public function getBadgeContent($id){
         //check if it is a badge
         $sticker    = Mage::getModel('tengisa_sticker/sticker');

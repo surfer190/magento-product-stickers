@@ -156,7 +156,7 @@ $this->addAttribute(
         'default'           => '',
         'label'             => 'Sticker',
         'input'             => 'multiselect',
-        'type'              => 'int',
+        'type'              => 'varchar',
         'source'            => 'tengisa_sticker/sticker_source',
         'global'            => Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_STORE,
         'is_visible'        => 1,

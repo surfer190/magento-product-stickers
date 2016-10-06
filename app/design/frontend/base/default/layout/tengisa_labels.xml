@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<layout>
+    <!-- <catalog_product_view>
+        <reference name="product.info.media">
+            <action method="setTemplate"><template>tengisa/labels/catalog/product/view/media.phtml</template></action>
+            <block type="core/template" name="badges" template="tengisa/labels/badge.phtml" />
+        </reference>
+        <reference name="product.info.extrahint">
+            <block type="core/template" name="panels" template="tengisa/labels/panel/view.phtml" />
+        </reference>
+    </catalog_product_view> -->
+    <catalog_category_default>
+        <reference name="product_list">
+            <action method="setTemplate"><template>tengisa/labels/catalog/product/list.phtml</template></action>
+            <block type="core/template" name="badge" template="tengisa/labels/badge.phtml" />
+            <!-- <block type="core/template" name="panels" template="tengisa/labels/panel/list.phtml" /> -->
+        </reference>
+    </catalog_category_default>
+    <catalog_category_layered>
+        <reference name="product_list">
+            <action method="setTemplate"><template>tengisa/labels/catalog/product/list.phtml</template></action>
+            <block type="core/template" name="badge" template="tengisa/labels/badge.phtml" />
+            <!-- <block type="core/template" name="panels" template="tengisa/labels/panel/list.phtml" /> -->
+        </reference>
+    </catalog_category_layered>
+    <catalogsearch_result_index>
+        <reference name="search_result_list">
+            <action method="setTemplate"><template>tengisa/labels/catalog/product/list.phtml</template></action>
+            <block type="core/template" name="badge" template="tengisa/labels/badge.phtml" />
+            <!-- <block type="core/template" name="panels" template="tengisa/labels/panel/list.phtml" /> -->
+        </reference>
+    </catalogsearch_result_index>
+    <catalogsearch_advanced_result>
+        <reference name="search_result_list">
+            <action method="setTemplate"><template>tengisa/labels/catalog/product/list.phtml</template></action>
+            <block type="core/template" name="badge" template="tengisa/labels/badge.phtml" />
+            <!-- <block type="core/template" name="panels" template="tengisa/labels/panel/list.phtml" /> -->
+        </reference>
+    </catalogsearch_advanced_result>
+</layout>

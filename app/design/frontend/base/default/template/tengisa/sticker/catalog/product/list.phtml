@@ -106,7 +106,7 @@
                     <div class="desc std">
                         <?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?>
                         <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped ?>" class="link-learn"><?php echo $this->__('Learn More') ?></a>
-                        <?php echo $this->getChild('panel')->setData('stickers', $_product->getStickers())->toHtml(); ?>
+                        <?php echo $this->getChild('panel-list')->setData('stickers', $_product->getStickers())->toHtml(); ?>
                     </div>
                 </div>
             </div>
@@ -148,7 +148,7 @@
                     }
                     ?>
                     <?php echo $this->getPriceHtml($_product, true) ?>
-                    <?php echo $this->getChild('panel')->setData('stickers', $_product->getStickers())->toHtml(); ?>
+                    <?php echo $this->getChild('panel-list')->setData('stickers', $_product->getStickers())->toHtml(); ?>
                     <?php if($_product->getRatingSummary()): ?>
                     <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
                     <?php endif; ?>

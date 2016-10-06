@@ -42,7 +42,7 @@
               <template>tengisa/sticker/catalog/product/list.phtml</template>
             </action>
             <block name="badge" template="tengisa/sticker/badge.phtml" type="tengisa_sticker/badge"/>
-            <block name="panel" template="tengisa/sticker/panel.phtml" type="tengisa_sticker/badge"/>
+            <block name="panel-list" template="tengisa/sticker/panel-list.phtml" type="tengisa_sticker/badge"/>
         </reference>
     </catalog_category_default>
     <catalog_category_layered>
@@ -56,7 +56,7 @@
               <template>tengisa/sticker/catalog/product/list.phtml</template>
             </action>
             <block name="badge" template="tengisa/sticker/badge.phtml" type="tengisa_sticker/badge" />
-            <block name="panel" template="tengisa/sticker/panel.phtml" type="tengisa_sticker/badge"/>
+            <block name="panel-list" template="tengisa/sticker/panel-list.phtml" type="tengisa_sticker/badge"/>
         </reference>
     </catalog_category_layered>
     <catalogsearch_result_index>
@@ -70,7 +70,7 @@
               <template>tengisa/sticker/catalog/product/list.phtml</template>
             </action>
             <block name="badge" template="tengisa/sticker/badge.phtml" type="tengisa_sticker/badge"/>
-            <block name="panel" template="tengisa/sticker/panel.phtml" type="tengisa_sticker/badge"/>
+            <block name="panel-list" template="tengisa/sticker/panel-list.phtml" type="tengisa_sticker/badge"/>
         </reference>
     </catalogsearch_result_index>
     <catalogsearch_advanced_result>
@@ -84,7 +84,7 @@
               <template>tengisa/sticker/catalog/product/list.phtml</template>
             </action>
             <block name="badge" template="tengisa/sticker/badge.phtml" type="tengisa_sticker/badge"/>
-            <block name="panel" template="tengisa/sticker/panel.phtml" type="tengisa_sticker/badge"/>
+            <block name="panel-list" template="tengisa/sticker/panel-list.phtml" type="tengisa_sticker/badge"/>
         </reference>
     </catalogsearch_advanced_result>
 </layout>
